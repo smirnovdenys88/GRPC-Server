@@ -19,9 +19,7 @@ public class GrpcServer {
                 .build();
 
         server.start();
-
         LOG.info("Server GRPC start port: " + port);
-
         server.awaitTermination();
     }
 }
