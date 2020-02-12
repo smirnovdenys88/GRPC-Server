@@ -1,2 +1,10 @@
-Step 1: protoc -I=. --java_out=src/main/java/ src/main/proto/HelloService.proto
+Step 1:
+protoc -I=. --java_out=src/main/java/ src/main/proto/HelloService.proto
+
+protoc --proto_path=src/main/proto  --java_out=src/main/java/ src/main/proto/helloservice.proto
+
+flags:
+    --proto_pat - path proto file
+    --java_out - place where generate class from proto file
+
 Step 2: mvn package install

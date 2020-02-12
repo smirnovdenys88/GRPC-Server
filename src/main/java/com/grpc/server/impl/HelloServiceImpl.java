@@ -1,8 +1,8 @@
 package com.grpc.server.impl;
 
-import com.grpc.server.service.HelloRequest;
-import com.grpc.server.service.HelloResponse;
 import com.grpc.server.service.HelloServiceGrpc;
+import com.grpc.server.service.hello.HelloRequest;
+import com.grpc.server.service.hello.HelloResponse;
 import io.grpc.stub.StreamObserver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +24,5 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
         } catch (Exception e) {
             responseObserver.onError(e);
         }
-
     }
 }

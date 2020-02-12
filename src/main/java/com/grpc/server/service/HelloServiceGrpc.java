@@ -1,5 +1,9 @@
 package com.grpc.server.service;
 
+import com.grpc.server.service.hello.HelloRequest;
+import com.grpc.server.service.hello.HelloResponse;
+import com.grpc.server.service.hello.HelloServiceImpl;
+
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
@@ -11,12 +15,12 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.4.0)",
-    comments = "Source: HelloService.proto")
+    comments = "Source: helloservice.proto")
 public final class HelloServiceGrpc {
 
   private HelloServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "HelloService";
+  public static final String SERVICE_NAME = "com.grpc.server.service.HelloService";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -25,7 +29,7 @@ public final class HelloServiceGrpc {
       io.grpc.MethodDescriptor.<HelloRequest, HelloResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "HelloService", "hello"))
+              "com.grpc.server.service.HelloService", "hello"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               HelloRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -72,8 +76,8 @@ public final class HelloServiceGrpc {
             METHOD_HELLO,
             asyncUnaryCall(
               new MethodHandlers<
-                      HelloRequest,
-                      HelloResponse>(
+                HelloRequest,
+                HelloResponse>(
                   this, METHODID_HELLO)))
           .build();
     }
@@ -201,7 +205,7 @@ public final class HelloServiceGrpc {
   private static final class HelloServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
     @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return HelloServiceOuterClass.getDescriptor();
+      return HelloServiceImpl.getDescriptor();
     }
   }
 
