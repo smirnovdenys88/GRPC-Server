@@ -6,8 +6,8 @@
 
     <groupId>com.grpc.server</groupId>
     <artifactId>server</artifactId>
-<!--    <version>1.0-SNAPSHOT</version>-->
     <packaging>jar</packaging>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -18,15 +18,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <docker.image.prefix>backend</docker.image.prefix>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-netty</artifactId>
@@ -43,7 +37,6 @@
             <version>1.22.1</version>
         </dependency>
     </dependencies>
-
     <build>
         <extensions>
             <extension>
